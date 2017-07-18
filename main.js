@@ -14,13 +14,18 @@ function make_tree (height, char) {
     height = height_input.value;
     height *= 2;
     char = char_input.value.toString();
+
+    if (height === '' || char === ''){
+        alert('That aint gonna work');
+    }else{
+
     for (var i = 0; i <= height; i++) {
         if ((i % 2) !== 0){
             // console.log(height)
         console.log(' '.repeat([(height-[i])]/2), char.repeat([i]))
         }
     }
-}
+}}
 
 
 
