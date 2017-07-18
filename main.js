@@ -5,15 +5,18 @@
 let tree_button = document.querySelector('#tree_grow');
 let char_input = document.querySelector('#char');
 let height_input = document.querySelector('#height');
+
 let tree = {};
+
 // console.log(char_input);
 
 
 
-function make_tree (height, char) {
+function make_tree (tree) {
     height = height_input.value;
     height *= 2;
     char = char_input.value.toString();
+
 
     if (height === '' || char === ''){
         alert('That aint gonna work');
@@ -32,7 +35,10 @@ function make_tree (height, char) {
 
 
 tree_button.addEventListener('click', function () {
-    make_tree(height_input, char)
+    tree.height = height_input.value;
+    tree.char = char_input.value.toString();
+    make_tree(tree)
+
 });
 
 
